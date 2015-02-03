@@ -19,6 +19,7 @@
       </div>
     </div>
 
+    <!-- Post list view -->
     <script type="text/ng-template" id="/home.html">
       <div class="page-header">
         <h1>Flapper News</h1>
@@ -48,12 +49,13 @@
       </form>
     </script>
 
+    <!-- A post with comments view -->
     <script type="text/ng-template" id="/posts.html">
       <div class="page-header">
-        <h3>
+        <h1>
           <a ng-show="post.link" href="{{post.link}}">{{post.title}}</a>
           <span ng-hide="post.link">{{post.title}}</span>
-        </h3>
+        </h1>
       </div>
 
       <div ng-repeat="comment in post.comments | orderBy:'-upvotes'">
@@ -61,6 +63,15 @@
         {{comment.upvotes}} - by {{comment.author}}
         <span style="font-size:20px; margin-left:10px;">{{comment.body}}</span>
       </div>
+
+      <form ng-submit="addComment()">
+        <h3>Add new comment</h3>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Comment" ng-model="body" />
+        </div>
+        <button type="submit" class="btn btn-primary">Add comment</button>
+      </form>
+
     </script>
 
   </body>
