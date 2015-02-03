@@ -3,6 +3,10 @@ Lab implementation following the [MEAN stack tutorial](https://thinkster.io/angu
 on [thinkster](https://thinkster.io/). My goal is to compare this to a LAMP stack at some point.
 (Well, not PHP naturally. And probably nginx instead of Apache. And maybe just the back end bit.)
 
+Check out this blog post for a basic comparison of [LAMP vs MEAN](http://blog.backand.com/mean-vs-lamp/).
+
+[mean](http://mean.io/) seems to be some sort of Rails-y set of tools with scaffolding, package management etc to get you started with the MEAN stack.
+
 ## Installing the prerequisites
 I'm using Ubuntu 14.04 so here is what I did.
 
