@@ -1,12 +1,16 @@
 <html>
   <head>
     <meta charset='utf-8'>
+
     <title>Lean, MEAN posting machine</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"></link>
+    <link rel="stylesheet" type="text/css" href="flapper.css"></link>
+
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.11/angular.min.js"></script>
     <script src="app.js"></script>
-    <style> .glyphicon-thumbs-up { cursor:pointer } </style>
   </head>
+
   <body ng-app="flapperNews" ng-controller="MainCtrl">
     <div class="row">
       <div class="col-md-6 col-md-offset-3">
@@ -16,15 +20,17 @@
         </div>
 
         <div ng-repeat="post in posts | orderBy: '-upvotes'">
-          <span class="glyphicon glyphicon-thumbs-up" ng-click="incrementUpvotes(post)"></span>
-          {{post.upvotes}}
-          <span style="font-size:20px; margin-left:10px;">
-            <a ng-show="post.link" href="{{post.link}}">{{post.title}}</a>
-            <span ng-hide="post.link">{{post.title}}</span>
-          </span>
+          <div class="post">
+            <span class="glyphicon glyphicon-thumbs-up" ng-click="incrementUpvotes(post)"></span>
+            {{post.upvotes}}
+            <span class="title">
+              <a ng-show="post.link" href="{{post.link}}">{{post.title}}</a>
+              <span ng-hide="post.link">{{post.title}}</span>
+            </span>
+          </div>
         </div>
 
-        <form ng-submit="addPost()" style="margin-top:30px;">
+        <form ng-submit="addPost()">
           <h3>Add a new post</h3>
           <div class="form-group">
             <input type="text"  class="form-control" placeholder="Title" ng-model="title" />
