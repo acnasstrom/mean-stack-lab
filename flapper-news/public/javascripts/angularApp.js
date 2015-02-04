@@ -20,7 +20,12 @@ angular
         .state('posts', {
           url: '/posts/{id}',
           templateUrl: '/posts.html',
-          controller: 'PostsController'
+          controller: 'PostsController',
+          resolve: {
+            post: ['$stateParams', 'posts', function($stateParams, posts) {
+              return posts.get($stateParams.id);
+            }]
+          }
         });
 
       $urlRouterProvider.otherwise('home')
@@ -48,6 +53,11 @@ angular
         return $http.put('/posts/' + post._id + '/upvote').success(function(data) {
           // Why not reload post with data instead? That would handle simultaneous upvotes from several users...
           post.upvotes += 1;
+        });
+      };
+      o.get = function(id) {
+        return $http.get('/posts/' + id).then(function(res) {
+          return res.data;
         });
       };
       return o;
@@ -81,11 +91,11 @@ angular
 
   .controller('PostsController', [
     '$scope',
-    '$stateParams',
     'posts',
+    'post',
 
-    function($scope, $stateParams, posts){
-      $scope.post = posts.posts[$stateParams.id];
+    function($scope, posts, post){
+      $scope.post = post;
 
       $scope.addComment = function() {
         if($scope.body == '') { return; }
