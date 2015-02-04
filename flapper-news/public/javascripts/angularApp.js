@@ -63,6 +63,11 @@ angular
       o.addComment = function(id, comment) {
         return $http.post('/posts/' + id + '/comments', comment);
       };
+      o.upvoteComment = function(post, comment) {
+        return $http.put('/posts/' + post._id + '/comments/' + comment._id + '/upvote').success(function(data) {
+          comment.upvotes += 1;
+        });
+      };
       return o;
     }
   ])
@@ -115,7 +120,7 @@ angular
       };
 
       $scope.incrementUpvotes = function(comment){
-        comment.upvotes += 1;
+        posts.upvoteComment(post, comment);
       };
     }
   ]);
