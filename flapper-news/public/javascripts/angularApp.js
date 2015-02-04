@@ -60,6 +60,9 @@ angular
           return res.data;
         });
       };
+      o.addComment = function(id, comment) {
+        return $http.post('/posts/' + id + '/comments', comment);
+      };
       return o;
     }
   ])
@@ -99,9 +102,17 @@ angular
 
       $scope.addComment = function() {
         if($scope.body == '') { return; }
-        $scope.post.comments.push({ body: $scope.body, author: 'user', upvotes: 0 });
+
+        posts.addComment(post._id, {
+          body: $scope.body,
+          author: 'user',
+          upvotes: 0
+        }).success(function(comment) {
+          $scope.post.comments.push(comment);
+        });
+
         $scope.body = '';
-      }
+      };
 
       $scope.incrementUpvotes = function(comment){
         comment.upvotes += 1;
