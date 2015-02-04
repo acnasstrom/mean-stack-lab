@@ -5,6 +5,15 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+// MongoDB connection and datamodel registry
+var mongoose = require('mongoose');
+require('./models/Posts');
+require('./models/Comments');
+mongoose.connect('mongodb://localhost/news');
+
+// Model schemas must be reqistered before importing routes
+// since we reference the schemas in that file! Otherwise you will
+// get a 'MissingSchemaError: Schema hasn't been registered for model "Post"'
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
@@ -59,8 +68,3 @@ app.use(function(err, req, res, next) {
 
 module.exports = app;
 
-// MongoDB connection and datamodel registry
-var mongoose = require('mongoose');
-require('./models/Posts');
-require('./models/Comments');
-mongoose.connect('mongodb://localhost/news');
