@@ -5,8 +5,6 @@ on [thinkster](https://thinkster.io/). My goal is to compare this to a LAMP stac
 
 Check out this blog post for a basic comparison of [LAMP vs MEAN](http://blog.backand.com/mean-vs-lamp/).
 
-[mean](http://mean.io/) seems to be some sort of Rails-y set of tools with scaffolding, package management etc to get you started with the MEAN stack.
-
 ## Installing the prerequisites
 I'm using Ubuntu 14.04 so here is what I did.
 
@@ -15,3 +13,37 @@ The Ubuntu Trusty repo contains an older version and the latest MongoDB release 
 
 ### [Install the latest Node.js via nvm](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-an-ubuntu-14-04-server)
 Again, Ubuntu Trusty repo contains an older version of Node.js and I want the latest stable version. I also think it's pratical to separate versions of frameworks/languages and their dependencies for different projects. After install I stored the version in a nvmrc file. Run `nvm use` in the project folder to make sure you are using the correct version.
+
+# Create an application using the mean framework
+While exploring the subject of MEAN i found [mean](http://mean.io/). It seems to be some sort of Rails-y set of tools with scaffolding, package management etc to get you started with the MEAN stack, so I decided to check it out after finishing the above mentioned tutorial.
+
+## Install prerequisites + mean framework
+You can use mean either with [Grunt](http://gruntjs.com/) or [Gulp](http://gulpjs.com/). I choose Grunt since that seems to be the recommendation from mean.
+
+```
+npm install -g grunt-cli
+npm install -g bower
+npm install -g mean-cli
+```
+
+## Create a new application
+
+```
+mean init flipper-news
+
+? What would you name your mean app? flipper-news
+? Do you prefer grunt or gulp as a taskrunner? grunt
+? Which mean packages would you like to install? mean-admin
+
+cd flipper-news && npm install
+```
+
+Then just start the server with `grunt` and go to http://localhost:3000. Voilà! You're up and running!
+
+I opted in for the [mean-admin](https://git.mean.io/linnovate/mean-admin/) package hoping it would provide a simple database web interface like [RailsAdmin](https://github.com/sferik/rails_admin) or [Django admin](https://docs.djangoproject.com/en/1.7/ref/contrib/admin/). The admin package _does_ provide a database interface. It also provides a web ui for managing users, system settings, themes and modules.
+
+Start by creating a user by clicking on the "Join" link in the web ui. Make your user an admin by running `mean user <your email> -a admin` and restarting server. Log in and now you have access to the admin features.
+
+The scaffolding done by calling `mean init <app>` also creates an example package **articles** as a starting point for a blog or similiar application.
+
+I'm not going to dig any deeper into the mean framework, but it seems kind of nice if you don't mind the overhead. You get user authentication and some other stuff to get you started with a new project quickly.
