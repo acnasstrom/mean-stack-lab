@@ -27,6 +27,7 @@ npm install -g mean-cli
 ```
 
 ### Create a new application
+Scaffolding with mean framework is really a wrapper around cloning the mean git repo (https://github.com/linnovate/mean) with some additional steps. A word of warning: You might want to clean up readme files, git repo configuration and other stuff before committing your new project to your repo. I did not.
 
 ```
 mean init flipper-news
