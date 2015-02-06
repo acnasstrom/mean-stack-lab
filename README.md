@@ -16,10 +16,12 @@ Again, Ubuntu Trusty repo contains an older version of Node.js and I want the la
 ## Following the tutorial
 I thought the tutorial was pretty straight forward with helpful links on subjects you may want to read up on. I have good previous knowledge of MongoDB and web development in general and I have worked with other Javascript front end frameworks before. I've never worked with AngularJS or Express before, so that was new to me.
 
+One thing that bothered me is that the tutorial did not include how to write tests for your implementation. I would like to have seen at least one unit test of the api code and some form of integration test of the full implementation. Thinkster tackles the issue of testing in their course [A Better Way to Learn AngularJS](https://thinkster.io/a-better-way-to-learn-angularjs/). Jasmine and Karma seems to be the preferred tools for testing AngularJS.
+
 ## Conclusions
 I feel I got a good basic understanding on how to create a web application using the MEAN stack and what the benefits are. Regarding drawbacks - not so much. It seems to me that when you need to get a web site up and going fast and easy, using MEAN is a viable option to the more common choice of Ruby on Rails. In fact I liked the architechture of MEAN better than Rails.
 
-Using the MEAN stack your backend produces a REST api and is not as tightly coupled with the data model as with a standard Rails application. So if your Node web server isn't performing as you hoped, you can just switch it to another implementation.
+Using the MEAN stack your back end produces a REST api and is not as tightly coupled with the data model as with a standard Rails application. So if your back end isn't performing as you hoped, you can easily switch it to another implementation.
 
 ## Extra: Creating an application using the MEAN.IO framework
 While exploring the subject of MEAN i found [MEAN.IO](http://mean.io/). It seemed to be some sort of Rails-y set of tools with scaffolding, package management etc to get you started with the MEAN stack, so I decided to check it out after finishing the above mentioned tutorial.
@@ -54,7 +56,7 @@ Start by creating a user by clicking on the "Join" link in the web ui. Make your
 
 The scaffolding done by calling `mean init <app>` also creates an example package **articles** as a starting point for a blog or similiar application.
 
-### Conclutions on MEAN.IO framework
+### Conclusions on MEAN.IO framework
 I'm not going to dig any deeper into the MEAN.IO framework, but it seems kind of nice if you don't mind the overhead produced by the somewhat clumbsy scaffolding. You get user authentication and some other stuff to get you started with a new project quickly.
 
 Personally, I don't like cluttering my projects with stuff that's not beeing used and would therefore not use MEAN.IO scaffolding to initialize a project. I would however gladly follow the MEAN.IO guidelines on how to structure a MEAN stack project.
