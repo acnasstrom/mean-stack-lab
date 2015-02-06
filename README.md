@@ -21,10 +21,10 @@ I feel I got a good basic understanding on how to create a web application using
 
 Using the MEAN stack your backend produces a REST api and is not as tightly coupled with the data model as with a standard Rails application. So if your Node web server isn't performing as you hoped, you can just switch it to another implementation.
 
-## Bonus: Create an application using the MEAN.IO framework
+## Extra: Creating an application using the MEAN.IO framework
 While exploring the subject of MEAN i found [MEAN.IO](http://mean.io/). It seemed to be some sort of Rails-y set of tools with scaffolding, package management etc to get you started with the MEAN stack, so I decided to check it out after finishing the above mentioned tutorial.
 
-### Install prerequisites + MEAN.IO framework
+### Installing prerequisites + MEAN.IO framework
 You can use MEAN.IO either with [Grunt](http://gruntjs.com/) or [Gulp](http://gulpjs.com/). I choose Grunt since that seems to be the recommendation from MEAN.IO.
 
 ```
@@ -33,7 +33,7 @@ npm install -g bower
 npm install -g mean-cli
 ```
 
-### Create a new application
+### Initializing a new application with scaffolding
 Scaffolding with MEAN.IO framework is really a wrapper around cloning the MEAN.IO git repo (https://github.com/linnovate/mean) with some additional steps. A word of warning: You might want to clean up readme files, git repo configuration and other stuff before committing your new project to your repo. I did not, and got dirty submodule warnings from git when committing.
 
 ```
