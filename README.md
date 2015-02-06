@@ -14,10 +14,13 @@ The Ubuntu Trusty repo contains an older version and the latest MongoDB release 
 ### [Install the latest Node.js via nvm](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-an-ubuntu-14-04-server)
 Again, Ubuntu Trusty repo contains an older version of Node.js and I want the latest stable version. I also think it's pratical to separate versions of frameworks/languages and their dependencies for different projects. After install I stored the version in a nvmrc file. Run `nvm use` in the project folder to make sure you are using the correct version.
 
-## Create an application using the mean framework
-While exploring the subject of MEAN i found [mean](http://mean.io/). It seems to be some sort of Rails-y set of tools with scaffolding, package management etc to get you started with the MEAN stack, so I decided to check it out after finishing the above mentioned tutorial.
+## Following the tutorial
+I thought the tutorial was pretty straight forward and I feel I got a good basic understanding on how to create a web application using the MEAN stack. I have good knowledge of MongoDB and web development in general and I have worked with other Javascript front end frameworks before. I've never worked with AngularJS or Express before, so that was new to me.
 
-### Install prerequisites + mean framework
+### Bonus: Create an application using the mean framework
+While exploring the subject of MEAN i found [mean](http://mean.io/). It seemed to be some sort of Rails-y set of tools with scaffolding, package management etc to get you started with the MEAN stack, so I decided to check it out after finishing the above mentioned tutorial.
+
+#### Install prerequisites + mean framework
 You can use mean either with [Grunt](http://gruntjs.com/) or [Gulp](http://gulpjs.com/). I choose Grunt since that seems to be the recommendation from mean.
 
 ```
@@ -26,7 +29,7 @@ npm install -g bower
 npm install -g mean-cli
 ```
 
-### Create a new application
+#### Create a new application
 Scaffolding with mean framework is really a wrapper around cloning the mean git repo (https://github.com/linnovate/mean) with some additional steps. A word of warning: You might want to clean up readme files, git repo configuration and other stuff before committing your new project to your repo. I did not.
 
 ```
