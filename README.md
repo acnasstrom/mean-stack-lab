@@ -14,10 +14,10 @@ The Ubuntu Trusty repo contains an older version and the latest MongoDB release 
 ### [Install the latest Node.js via nvm](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-an-ubuntu-14-04-server)
 Again, Ubuntu Trusty repo contains an older version of Node.js and I want the latest stable version. I also think it's pratical to separate versions of frameworks/languages and their dependencies for different projects. After install I stored the version in a nvmrc file. Run `nvm use` in the project folder to make sure you are using the correct version.
 
-# Create an application using the mean framework
+## Create an application using the mean framework
 While exploring the subject of MEAN i found [mean](http://mean.io/). It seems to be some sort of Rails-y set of tools with scaffolding, package management etc to get you started with the MEAN stack, so I decided to check it out after finishing the above mentioned tutorial.
 
-## Install prerequisites + mean framework
+### Install prerequisites + mean framework
 You can use mean either with [Grunt](http://gruntjs.com/) or [Gulp](http://gulpjs.com/). I choose Grunt since that seems to be the recommendation from mean.
 
 ```
@@ -26,7 +26,7 @@ npm install -g bower
 npm install -g mean-cli
 ```
 
-## Create a new application
+### Create a new application
 
 ```
 mean init flipper-news
