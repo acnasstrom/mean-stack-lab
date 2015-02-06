@@ -1,4 +1,4 @@
-# mean-stack-lab
+# MEAN stack lab
 Lab implementation following the [MEAN stack tutorial](https://thinkster.io/angulartutorial/mean-stack-tutorial/)
 on [thinkster](https://thinkster.io/). My goal is to compare this to a LAMP stack at some point.
 (Well, not PHP naturally. And probably nginx instead of Apache. And maybe just the back end bit.)
