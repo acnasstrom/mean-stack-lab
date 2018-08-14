@@ -60,3 +60,4 @@ The scaffolding done by calling `mean init <app>` also creates an example packag
 I'm not going to dig any deeper into the MEAN.IO framework, but it seems kind of nice if you don't mind the overhead produced by the somewhat clumbsy scaffolding. You get user authentication and some other stuff to get you started with a new project quickly.
 
 Personally, I don't like cluttering my projects with stuff that's not beeing used and would therefore not use MEAN.IO scaffolding to initialize a project. I would however gladly follow the MEAN.IO guidelines on how to structure a MEAN stack project.
+
